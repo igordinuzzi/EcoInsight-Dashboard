@@ -5,152 +5,315 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charts</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Clean energy -->
-    <div>
-        <h2>Affordable and clean energy</h2>
-        <h3>More people than ever have access to electricity, but the pace is lagging for least developed countries</h3>
-            <p>Children affected by malnutrition – including stunting (low height for age), 
-                wasting (low weight for height), micronutrient deficiencies, and by being 
-                overweight – face heightened risks of poor growth and development. Despite 
-                progress in certain regions, child malnutrition remains a global concern that 
-                has been exacerbated by the ongoing food and nutrition crisis – with low- and lower-middle-income countries among those most affected.</p>
-            {{ chart1_html|safe }}
+    
+    <!-- Nav-->
+    <header class="header-nav">
+        <div class="logo-container">
+            <!-- Replace 'path/to/logo.svg' with the actual path to your SVG logo -->
+            <img src="static/logo/logo.svg" alt="Logo">
         </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#search" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i> Search</a></li>
+                <li><a href="#report" aria-label="The Report"><i class="fa-regular fa-file"></i> The Report</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!-- Hero section -->
+    <div class="hero-section">
+        <div>
+          <h1 class="hero-content">Unlocking Progress: EcoInsight</h1>
+          <h2 class="hero-content">Join us in the pursuit of a brighter and more equitable tomorrow.</h2>
+        </div>
+      </div>   
+
+    <!-- Search bar -->
+    <div class="search-container" id="search">
+        <label for="searchBar">Search:</label>
+        <input type="text" id="searchBar" onkeyup="autocompleteSearch(this.value)" placeholder="Search here...">
+        <button onclick="clearSearch()">Clear</button>
+        <div id="autocomplete-list"></div>
+    </div>
+    
+    <main>
+    <div class="container">
+        <div class="report" id="report">
+        <h1><i class="fa-regular fa-file"></i> The Report</h1>
+        </div>
+        <div class="two-column-layout">
+            <div class="column">
+                <!-- First half of your paragraph -->
+                <p>We have entered an age of polycrisis. Conflict, climate change, the lingering effects of the COVID-19 pandemic and other global challenges are threatening to derail hard-earned progress towards the SDGs.</p>
+                <p>The climate crisis is worsening as greenhouse gas emissions continue to rise. The latest Intergovernmental Panel on Climate Change report finds that global temperature is already 1.1 °C above pre-industrial levels.</p>
+            </div>
+            <div class="column">
+                <!-- Second half of your paragraph -->
+                <p>Developing countries are grappling with an unprecedented rise in external debt following the pandemic, a situation compounded by inflation, rising interest rates, trade tensions and constrained fiscal capacity.</p>
+                <p>The 2030 Agenda remains the clearest blueprint of humanity&apos;s highest aspirations.</p>
+            </div>
+        </div>
+        
+
+        <!-- Clean energy -->
+        <div id="clean-energy">
+            <div class="small-tag small-tag-energy">
+                <i class="fa-solid fa-tag"></i> Energy
+            </div>
+            <h2><i class="fa-solid fa-lightbulb"></i> Advancing Sustainable Health and Development with Clean Energy</h2>
+            <h3>Increasing Access to Renewable Energy Globally, Especially in Developing Nations</h3>
+                <p>Access to clean energy is essential for promoting health, well-being, and sustainable development. 
+                    It's crucial not just for powering homes and industries, but also for ensuring cleaner air, reducing carbon emissions, and combating climate change. 
+                    Challenges include developing renewable energy sources, enhancing storage capabilities, and ensuring equitable distribution, especially in underserved areas. 
+                    Implementing advanced renewable technologies, promoting energy efficiency, and raising public awareness about energy 
+                    conservation are key steps. Prioritizing clean energy access helps improve health outcomes, enhances quality of life, and fosters global sustainability and resilience.</p>
+            <p class="smaller"><i class="fa-solid fa-circle-info"></i> Proportion of population with access to electricity, 2015 and 2021 (percentage)</p>
+            <div aria-label="Prioritizing Clean Water for Health and Sustainability">
+                {{ chart1_html|safe }}
+              </div>
+            </div>
 
         <!-- Clean water -->
-        <div>
-            <h2>Affordable and clean energy</h2>
-            <h3>More people than ever have access to electricity, but the pace is lagging for least developed countries</h3>
-                <p>Children affected by malnutrition – including stunting (low height for age), 
-                    wasting (low weight for height), micronutrient deficiencies, and by being 
-                    overweight – face heightened risks of poor growth and development. Despite 
-                    progress in certain regions, child malnutrition remains a global concern that 
-                    has been exacerbated by the ongoing food and nutrition crisis – with low- and lower-middle-income countries among those most affected.</p>
-                {{ chart2_html|safe }}
+        <div id="clean-water">
+            <div class="small-tag small-tag-water">
+                <i class="fa-solid fa-tag"></i> Water
+            </div>
+            <h2><i class="fa-solid fa-droplet"></i> Water-Use Efficiency and Access to Clean Water</h2>
+            <h3>Exploring Sustainable Solutions for Clean Water Access and Quality</h3>
+                <p>Improving water-use efficiency and ensuring clean 
+                    water access are key to sustainable development. 
+                    Optimizing water use across sectors and employing 
+                    innovative practices like wastewater recycling and water-saving technologies 
+                    reduce waste and conserve resources. Simultaneously, enhancing water purification, 
+                    protecting water sources, and expanding distribution infrastructure, particularly in underserved areas, 
+                    are crucial for health and quality of life. This synergy addresses health, environmental concerns, 
+                    and bolsters long-term sustainability and climate resilience.
+                </p>
+                <p class="smaller"><i class="fa-solid fa-circle-info"></i> Water-use efficiency, 2015 and 2020 (USD/m3)</p>
+                <div aria-label="Water-Use Efficiency and Access to Clean Water">
+                    {{ chart2_html|safe }}
+                </div>
             </div>
         
         <!-- Decent work -->
-        <div>
-            <h2>Affordable and clean energy</h2>
-            <h3>More people than ever have access to electricity, but the pace is lagging for least developed countries</h3>
-                <p>Children affected by malnutrition – including stunting (low height for age), 
-                    wasting (low weight for height), micronutrient deficiencies, and by being 
-                    overweight – face heightened risks of poor growth and development. Despite 
-                    progress in certain regions, child malnutrition remains a global concern that 
-                    has been exacerbated by the ongoing food and nutrition crisis – with low- and lower-middle-income countries among those most affected.</p>
-                {{ chart3_html|safe }}
+        <div id="decent-work">
+            <div class="small-tag small-tag-work">
+                <i class="fa-solid fa-tag"></i> Economic Growth
+            </div>
+            <h2><i class="fa-solid fa-briefcase"></i> Promoting Decent Work for Sustainable Growth</h2>
+            <h3>Enhancing Workforce Well-being for Economic and Social Prosperity</h3>
+            <p>Promoting decent work is key to sustainable growth 
+                and well-being. It involves ensuring productive employment with fair income, 
+                workplace security, and family social protection. 
+                This concept extends to personal development, social integration, 
+                and equal opportunities. Achieving this requires job creation, workers' rights, 
+                social protection, and social dialogue, with collaborative efforts from governments, employers, and workers. 
+                Such policies improve workers' quality of life and stimulate the economy, aiding in sustainable development. </p>
+                <p class="smaller"><i class="fa-solid fa-circle-info"></i> Annual growth rate of global real GDP per capita and annual growth rate of real GDP of LDCs, 2015–2024 (percentage)</p>
+            </p>
+            <div aria-label="Promoting Decent Work for Sustainable Growth">
+             {{ chart3_html|safe }}
+             </div>
             </div>
         
         <!-- Food waste -->
-        <div>
-            <h2>Affordable and clean energy</h2>
-            <h3>More people than ever have access to electricity, but the pace is lagging for least developed countries</h3>
-                <p>Children affected by malnutrition – including stunting (low height for age), 
-                    wasting (low weight for height), micronutrient deficiencies, and by being 
-                    overweight – face heightened risks of poor growth and development. Despite 
-                    progress in certain regions, child malnutrition remains a global concern that 
-                    has been exacerbated by the ongoing food and nutrition crisis – with low- and lower-middle-income countries among those most affected.</p>
-                {{ chart4_html|safe }}
+        <div id="food-waste">
+            <div class="small-tag small-tag-food">
+                <i class="fa-solid fa-tag"></i> Food Waste
+            </div>
+            <h2><i class="fa-solid fa-bowl-food"></i> Tackling Food Waste for Environmental and Social Sustainability</h2>
+            <h3>Addressing Food Waste: Steps Towards Environmental Conservation and Social Responsibility</h3>
+                <p>Reducing food waste is crucial for environmental sustainability 
+                    and social responsibility. A significant portion of food waste 
+                    contributes to emissions and resource wastage. Addressing this 
+                    spans the food supply chain, requiring efficient production, 
+                    distribution, responsible consumption, and innovative recycling like composting. 
+                    Governments, businesses, and consumers must collaborate in policy-making and action to minimize waste, 
+                    conserve resources, lessen environmental impact, and improve food security, especially in areas facing food access challenges.</p>
+                    <p class="smaller"><i class="fa-solid fa-circle-info"></i> Estimated total food waste and food waste in households per person, 2019 (kilograms) 
+                    </p>
+                    <div aria-label="Tackling Food Waste for Environmental and Social Sustainability">
+                    {{ chart4_html|safe }}
+                    </div>
             </div>
         
         <!-- Childbirth -->
-        <div>
-            <h2>Affordable and clean energy</h2>
-            <h3>More people than ever have access to electricity, but the pace is lagging for least developed countries</h3>
-                <p>Children affected by malnutrition – including stunting (low height for age), 
-                    wasting (low weight for height), micronutrient deficiencies, and by being 
-                    overweight – face heightened risks of poor growth and development. Despite 
-                    progress in certain regions, child malnutrition remains a global concern that 
-                    has been exacerbated by the ongoing food and nutrition crisis – with low- and lower-middle-income countries among those most affected.</p>
-                {{ chart5_html|safe }}
+        <div id="childbirth">
+            <div class="small-tag small-tag-health">
+                <i class="fa-solid fa-tag"></i> Good Health
+            </div>
+            <h2><i class="fa-solid fa-heart-pulse"></i> Promoting Good Health in Childbirth</h2>
+            <h3>Ensuring Quality Healthcare for Mothers and Newborns During Childbirth</h3>
+                <p>Good health during childbirth is essential 
+                    for mothers and newborns, requiring comprehensive healthcare. 
+                    This includes quality prenatal and postnatal care, access 
+                    to skilled healthcare professionals, and education about 
+                    childbirth and infant care. Addressing broader health determinants 
+                    like poverty and access to healthcare is also crucial. 
+                    Integrating medical care with community support can reduce 
+                    childbirth complications and improve outcomes, leading to healthier 
+                    families and communities.</p>
+                    <p class="smaller"><i class="fa-solid fa-circle-info"></i> Proportion of births attended by skilled health personnel, 2015 and 2022 (percentage)</p>
+                    <div aria-label="Promoting Good Health in Childbirth">
+                    {{ chart5_html|safe }}
+                    </div>
             </div>
         
         <!-- Hiv -->
-        <div>
-            <h2>Affordable and clean energy</h2>
-            <h3>More people than ever have access to electricity, but the pace is lagging for least developed countries</h3>
-                <p>Children affected by malnutrition – including stunting (low height for age), 
-                    wasting (low weight for height), micronutrient deficiencies, and by being 
-                    overweight – face heightened risks of poor growth and development. Despite 
-                    progress in certain regions, child malnutrition remains a global concern that 
-                    has been exacerbated by the ongoing food and nutrition crisis – with low- and lower-middle-income countries among those most affected.</p>
-                {{ chart6_html|safe }}
+        <div id="hiv">
+            <div class="small-tag small-tag-health">
+                <i class="fa-solid fa-tag"></i> Good Health
+            </div>
+            <h2><i class="fa-solid fa-heart-pulse"></i> Combating HIV for Good Health</h2>
+            <h3>Comprehensive Strategies for HIV Prevention and Management</h3>
+                <p>Effectively managing HIV/AIDS is vital for good health and well-being. It requires not just antiretroviral 
+                    therapy but also comprehensive care, including widespread testing, 
+                    counseling, and education on prevention. Tackling socio-economic 
+                    factors like poverty and healthcare access is essential. 
+                    Strengthening healthcare infrastructure for consistent access 
+                    to treatment and promoting community engagement for prevention 
+                    and destigmatization are key. Integrating medical treatment with 
+                    social support and education can significantly reduce HIV's impact, 
+                    benefiting individuals and communities.</p>
+                    <p class="smaller"><i class="fa-solid fa-circle-info"></i> HIV incidence rates, 2010 and 2021 (new cases per 1,000 uninfected adults aged 15–49 years)</p>
+                    <div aria-label="Combating HIV for Good Health">
+                    {{ chart6_html|safe }}
+                    </div>
             </div>
         
         <!-- Medical doctors vs nursing -->
-        <div>
-            <h2>Affordable and clean energy</h2>
-            <h3>More people than ever have access to electricity, but the pace is lagging for least developed countries</h3>
-                <p>Children affected by malnutrition – including stunting (low height for age), 
-                    wasting (low weight for height), micronutrient deficiencies, and by being 
-                    overweight – face heightened risks of poor growth and development. Despite 
-                    progress in certain regions, child malnutrition remains a global concern that 
-                    has been exacerbated by the ongoing food and nutrition crisis – with low- and lower-middle-income countries among those most affected.</p>
+        <div id="medical-doctors-vs-nursing">
+            <div class="small-tag small-tag-health">
+                <i class="fa-solid fa-tag"></i> Good Health
+            </div>
+            <h2><i class="fa-solid fa-heart-pulse"></i> Medical Professionals: Balancing Roles of Doctors and Nurses in Promoting Good Health</h2>
+            <h3>Synergy in Healthcare: Collaborative Roles of Doctors and Nurses</h3>    
+            <p>The collaboration between doctors and nurses is 
+                    crucial for effective healthcare. Doctors diagnose 
+                    and treat illnesses with their medical expertise, 
+                    while nurses provide essential patient care, support, and health education. 
+                    This synergy ensures comprehensive care, combining their distinct but complementary skills for 
+                    a holistic healthcare approach. Fostering this collaboration is vital for improved 
+                    patient outcomes and overall community health.
+                </p>
+                <p class="smaller"><i class="fa-solid fa-circle-info"></i> Density of select health professionals, 2014–2021 (per 10,000 population)</p>
+                <div aria-label="Medical Professionals: Balancing Roles of Doctors and Nurses in Promoting Good Health">
                 {{ chart7_html|safe }}
+                </div>
             </div>
         
         <!-- Industry -->
-        <div>
-            <h2>Affordable and clean energy</h2>
-            <h3>More people than ever have access to electricity, but the pace is lagging for least developed countries</h3>
-                <p>Children affected by malnutrition – including stunting (low height for age), 
-                    wasting (low weight for height), micronutrient deficiencies, and by being 
-                    overweight – face heightened risks of poor growth and development. Despite 
-                    progress in certain regions, child malnutrition remains a global concern that 
-                    has been exacerbated by the ongoing food and nutrition crisis – with low- and lower-middle-income countries among those most affected.</p>
+        <div id="industry-innovation">
+            <div class="small-tag small-tag-industry">
+                <i class="fa-solid fa-tag"></i> Industry Innovation
+            </div>
+            <h2><i class="fa-solid fa-industry"></i> Fostering Industry Innovation for Sustainable Development</h2>
+            <h3>Driving Growth Through Sustainable Industrial Innovation</h3>
+                <p>Industry innovation is vital for sustainable 
+                    development and economic growth. It involves creating and applying new ideas, processes, 
+                    and technologies to enhance efficiency, reduce environmental impact, and open new markets and job opportunities. 
+                    A supportive ecosystem, including government incentives, research and development, and collaboration between academia and industry, is essential. 
+                    Encouraging a culture of creativity and integrating sustainable practices in innovation ensures that industrial growth is environmentally responsible. 
+                    This approach helps build resilient economies and adapt to global market changes.
+                </p>
+                <p class="smaller"><i class="fa-solid fa-circle-info"></i> Research and development expenditure as a proportion of GDP, 2015 and 2020 (percentage)</p>
+                <div aria-label="Fostering Industry Innovation for Sustainable Development">
                 {{ chart8_html|safe }}
+                </div>
             </div>
         
         <!-- Public transportation -->
-        <div>
-            <h2>Affordable and clean energy</h2>
-            <h3>More people than ever have access to electricity, but the pace is lagging for least developed countries</h3>
-                <p>Children affected by malnutrition – including stunting (low height for age), 
-                    wasting (low weight for height), micronutrient deficiencies, and by being 
-                    overweight – face heightened risks of poor growth and development. Despite 
-                    progress in certain regions, child malnutrition remains a global concern that 
-                    has been exacerbated by the ongoing food and nutrition crisis – with low- and lower-middle-income countries among those most affected.</p>
+        <div id="public-transporation">
+            <div class="small-tag small-tag-transp">
+                <i class="fa-solid fa-tag"></i> Sustainable Cities
+            </div>
+            <h2><i class="fa-solid fa-train-subway"></i> Enhancing Public Transportation for Sustainable Mobility</h2>
+            <h3>Developing Efficient and Eco-Friendly Public Transport Systems</h3>
+                <p>Enhancing public transportation is essential for sustainable mobility and urban life quality. 
+                    It alleviates traffic congestion, reduces emissions, and offers affordable, accessible travel. Key measures include expanding 
+                    and modernizing infrastructure like buses, trains, and integrating transport modes for better connectivity. Focusing on reliability, 
+                    efficiency, and safety can shift preference from private vehicles to public transit. Sustainable practices, such as using electric 
+                    vehicles and optimized routing, further environmental goals. Collaborative efforts from governments and urban planners are crucial in developing effective public transit systems, leading to more inclusive and eco-friendly urban communities.
+                </p>
+                <p class="smaller"><i class="fa-solid fa-circle-info"></i> Coverage of public transport and share of population with convenient access in urban areas, 2022 (percentage)</p>
+                <div aria-label="Enhancing Public Transportation for Sustainable Mobility">
                 {{ chart9_html|safe }}
+                </div>
             </div>
 
         <!-- Quality education -->
-        <div>
-            <h2>Affordable and clean energy</h2>
-            <h3>More people than ever have access to electricity, but the pace is lagging for least developed countries</h3>
-                <p>Children affected by malnutrition – including stunting (low height for age), 
-                    wasting (low weight for height), micronutrient deficiencies, and by being 
-                    overweight – face heightened risks of poor growth and development. Despite 
-                    progress in certain regions, child malnutrition remains a global concern that 
-                    has been exacerbated by the ongoing food and nutrition crisis – with low- and lower-middle-income countries among those most affected.</p>
-                {{ chart10_html|safe }}
+        <div id="quality-education">
+            <div class="small-tag small-tag-education">
+                <i class="fa-solid fa-tag"></i> Quality Education
+            </div>
+            <h2><i class="fa-solid fa-shapes"></i> Enhancing Quality Learning through Collaborative Teaching</h2>
+            <h3>Fostering a Collaborative and Dynamic Educational Environment</h3>
+                <p>Collaborative education, involving teachers, administrators, 
+                    and students, enhances learning quality. Teachers facilitate 
+                    knowledge and critical thinking, while administrators provide 
+                    resources and support. Students actively engage and contribute, 
+                    fostering diverse perspectives and deeper subject understanding. This interdependent approach prepares students for 
+                    real-world challenges, creating a dynamic and impactful educational experience.</p>
+                    <p class="smaller"><i class="fa-solid fa-circle-info"></i> Participation rate in organized learning (one year before the official primary entry age), 2020 (percentage)</p>
+                    <div aria-label="Enhancing Quality Learning through Collaborative Teaching">
+                    {{ chart10_html|safe }}
+                    </div>
             </div>
         
         <!-- Overweight -->
-        <div>
-            <h2>Affordable and clean energy</h2>
-            <h3>More people than ever have access to electricity, but the pace is lagging for least developed countries</h3>
-                <p>Children affected by malnutrition – including stunting (low height for age), 
-                    wasting (low weight for height), micronutrient deficiencies, and by being 
-                    overweight – face heightened risks of poor growth and development. Despite 
-                    progress in certain regions, child malnutrition remains a global concern that 
-                    has been exacerbated by the ongoing food and nutrition crisis – with low- and lower-middle-income countries among those most affected.</p>
-                {{ chart11_html|safe }}
+        <div id="overweight-stunting">
+            <div class="small-tag small-tag-hunger">
+                <i class="fa-solid fa-tag"></i> Zero Hunger
+            </div>
+            <h2><i class="fa-solid fa-wheat-awn-circle-exclamation"></i> Combating Childhood Overweight and Stunting: A Multifaceted Approach for Healthier Generations</h2>
+            <h3>Holistic Strategies for Tackling Childhood Health Challenges</h3>
+                <p>Addressing the dual challenges of childhood overweight and stunting requires holistic public health strategies. 
+                    Increasingly common childhood overweight and obesity, driven by poor diets and lack of exercise, pose various health risks, while stunting from chronic undernutrition 
+                    hampers growth and development worldwide. Both issues are linked to socio-economic factors, access to healthy food, and nutritional education. To combat these, 
+                    interventions need to promote balanced diets, physical activity, and access to nutritious food, particularly in underserved areas. Integrating healthcare, education, 
+                    and community programs is key to improving child health and building resilient societies.</p>
+                    <p class="smaller"><i class="fa-solid fa-circle-info"></i> Proportion of children under age 5 who are overweight, 2012 and 2022 (percentage)</p>
+                    <div aria-label="Combating Childhood Overweight and Stunting: A Multifaceted Approach for Healthier Generations">
+                    {{ chart11_html|safe }}
+                    </div>
             </div>
         
         <!-- Stunting -->
-        <div>
-            <h2>Affordable and clean energy</h2>
-            <h3>More people than ever have access to electricity, but the pace is lagging for least developed countries</h3>
-                <p>Children affected by malnutrition – including stunting (low height for age), 
-                    wasting (low weight for height), micronutrient deficiencies, and by being 
-                    overweight – face heightened risks of poor growth and development. Despite 
-                    progress in certain regions, child malnutrition remains a global concern that 
-                    has been exacerbated by the ongoing food and nutrition crisis – with low- and lower-middle-income countries among those most affected.</p>
-                {{ chart12_html|safe }}
+        <div id="zero-hunger-child-stunting">
+            <div class="small-tag small-tag-hunger">
+                <i class="fa-solid fa-tag"></i> Zero Hunger
+            </div>
+            <h2><i class="fa-solid fa-wheat-awn-circle-exclamation"></i> Tackling Zero-Hunger and Child Stunting</h2>
+            <h3>Integrated Approaches to Eradicate Hunger and Reduce Child Stunting</h3>
+                <p>To combat zero-hunger and reduce child stunting, a comprehensive strategy is needed 
+                    that tackles both immediate food access issues and deeper socio-economic factors. Addressing stunting, which hinders a child's development and impacts community progress, 
+                    requires improving agriculture, enhancing food distribution, and providing nutrition education. Equally important is addressing poverty and inequality. 
+                    By combining efforts in nutrition, healthcare, education, and economic policy, we can effectively fight hunger and stunting, fostering healthier and more prosperous communities.</p>
+                <p class="smaller"><i class="fa-solid fa-circle-info"></i> Number of children under age 5 who are affected by stunting, 2012 and 2022 (millions)</p>
+                <div aria-label="Tackling Zero-Hunger and Child Stunting">
+                    {{ chart12_html|safe }}
+                    </div>
             </div>
     </div>
+</main>
+
+<footer class="site-footer">
+    <p class="disclaimer">Disclaimer: This website is a student's project for learning Python. 
+        The information presented on this website has been sourced from The Sustainable Development Goals Report 2023,<br> 
+        as published by the United Nations. The copyright for this content is held by the United Nations. 
+        To check the original whitepaper, please <a href="https://unstats.un.org/sdgs/report/2023/The-Sustainable-Development-Goals-Report-2023.pdf" target="_blank" aria-label="Open The Sustainable Development Goals Report 2023 PDF in a new window">click here</a>
+    </p>
+    <br>
+    <p class="disclaimer"><a href="https://github.com/igordinuzzi" target="_blank" aria-label="Visit Igor's GitHub profile and view the source code repository. Made by Igor with love in 2023 ❤️"><i class="fa-brands fa-github"></i> Made by Igor ❤️</a>
+    </p>
+</footer>
+
+
+<script src="{{ url_for('static', filename='js/autocomplete.js') }}"></script>
+<script src="{{ url_for('static', filename='js/navigation.js') }}"></script>
 </body>
 </html>
