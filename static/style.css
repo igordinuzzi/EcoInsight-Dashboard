@@ -1,11 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto&display=swap');
+
+:root {
+    /* Define your variables here */
+    --main-font: 'Roboto', sans-serif;
+    --accent-font: 'Inconsolata', sans-serif;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --subtext-color: #666;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --margin-top: 30px;
+    --margin-bottom: 20px;
+    --paragraph-font-size: 16px;
+    --small-font-size: 14px;
+    --padding: 20px;
+    --button-black: #C9BDE5; /* Lavender purple color */
+    --button-black-hover: #FFFFFF; /* Lighter shade for hover */
+    --secondary-font-size: 20px;
+    --nav-font-size: 20px;
+}
+
+
 /* General body styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: var(--main-font);
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: var(--text-color);
+    background-color: var(--background-color);
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
 /* Style for the main container */
@@ -16,16 +38,498 @@ body {
 }
 
 /* Headings style */
-h1 {
-    color: #444;
-    margin-top: 30px;
-    margin-bottom: 20px;
+h1, h2, h3 {
+    color: var(--text-color);
+    margin-top: var(--margin-top);
+    margin-bottom: var(--margin-bottom);
+    font-family: var(--accent-font);
+    text-align: left;
+}
+
+.report {
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center; /* Centers text inside the child elements */
+}
+
+
+#clean-energy h2 {
+    color: #A41034; 
+}
+
+#clean-water h2 {
+    color: #AE6329; 
+}
+
+#decent-work h2 {
+    color: #C19D00; 
+}
+
+#food-waste h2 {
+    color: #016833; 
+}
+
+#childbirth h2 {
+    color: #006086; 
+}
+
+#hiv h2 {
+    color: #006086; 
+}
+
+#medical-doctors-vs-nursing h2 {
+    color: #006086; 
+}
+
+#industry-innovation h2 {
+    color: #3B2882; 
+}
+
+#public-transporation h2 {
+    color: #57116A; 
+}
+
+#quality-education h2 {
+    color: #79244D; 
+}
+
+#overweight-stunting h2 {
+    color: #79244D; 
+}
+
+#overweight-stunting h2 {
+    color: #000000; 
+}
+
+#zero-hunger-child-stunting h2 {
+    color: #000000; 
 }
 
 /* Paragraph text style */
 p {
-    font-size: 16px;
+    font-size: var(--paragraph-font-size);
+    margin-bottom: var(--margin-bottom);
+}
+
+p.smaller {
+    font-size: 14px; /* Smaller than the default size */
+    color: var(--subtext-color);
+  }
+
+
+@media (max-width: 600px) {
+    h1, h2, h3 {
+        font-size: 24px; 
+    }
+
+    p {
+        font-size: 16px; 
+    }
+
+    p.smaller {
+        font-size: 12px; 
+    }
+}
+
+
+/* Div styles */
+
+#clean-energy,
+#clean-water,
+#decent-work,
+#food-waste,
+#childbirth,
+#hiv,
+#medical-doctors-vs-nursing,
+#industry-innovation,
+#public-transporation,
+#quality-education,
+#overweight-stunting,
+#zero-hunger-child-stunting {
+    background-color: #fff;
+    padding: var(--padding);
+    margin-bottom: var(--margin-bottom);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Search */
+
+/* Basic styling for the search bar and buttons */
+
+.search-container {
+    display: flex;
+    align-items: center; /* Centers children vertically */
+    justify-content: center; /* Center children horizontally */
+    position: relative; /* For absolute positioning of children */
+    background-color: var(--text-color);
+    padding: var(--padding);
+    margin-top: 0; /* Set margin-top to 0 */
+    margin-bottom: 0; /* Set margin-bottom to 0 */
+    width: 100%; /* Make width full */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+
+#searchBar, button {
+    padding: 10px;
+    font-size: var(--secondary-font-size);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#searchBar {
+    width: calc(50% - 22px); /* Adjust width to 50% on desktop */
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background-color: var(--button-black);
+    color: var(--text-color);
+    margin-left: 10px;
+    font-size: var(--secondary-font-size);
+}
+
+button:hover {
+    background-color: var(--button-black-hover);
+}
+
+/* Style for the autocomplete list */
+#autocomplete-list {
+    position: absolute;
+    top: 100%; /* Right below the search bar */
+    left: 50%; /* Start from the middle of the parent */
+    transform: translateX(-50%); /* Move back by half of its own width */
+    width: calc(50% - 22px); /* Same as the search bar */
+    z-index: 1000; 
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1); 
+    background-color: white;
+    font-size: var(--secondary-font-size);
+}
+
+
+
+#autocomplete-list div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--background-color);
+    border-bottom: 1px solid #ddd;
+}
+
+#autocomplete-list div:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    #searchBar, button {
+        width: 100%; /* Full width on smaller screens */
+        margin-top: 5px;
+        font-size: 14px;
+        padding: 8px;
+        display: block; /* Stack them vertically on smaller screens */
+        margin-right: 0; /* Reset margin for mobile */
+    }
+
+    #autocomplete-list {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    button {
+        width: auto; /* Adjust button width on smaller screens */
+        padding: 8px 10px;
+    }
+}
+
+/* Nav */
+.header-nav {
+    background-color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: sticky; /* Add this line */
+    top: 0; /* Add this line */
+    z-index: 1000; /* Optional, ensures the nav is above other content */
+}
+
+
+.logo-container img {
+    max-width: 300px; 
+    height: auto;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 10px;
+}
+
+.menu a {
+    color: var(--button-black);
+    text-decoration: none;
+    font-size: var(--nav-font-size);
+}
+
+.menu a:hover {
+    color: var(--button-black-hover);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu a {
+        font-size: 16px;
+    }
+
+    .menu li {
+        margin: 5px 0;
+    }
+
+    .logo-container img {
+        max-width: 150px; /* Smaller size for mobile screens */
+        height: auto;
+    }
+
+    
+}
+
+.header-nav.smaller-nav {
+    padding: 10px 0; /* Reduced padding */
+    transition: padding 0.3s; /* Smooth transition for the padding change */
+}
+
+/* Optionally, reduce the size of the logo as well */
+.header-nav.smaller-nav .logo-container img {
+    max-width: 100px; /* Smaller logo */
+    transition: max-width 0.3s; /* Smooth transition for the logo resizing */
+}
+
+.header-nav.smaller-nav .menu a {
+    font-size: 14px;
+}
+
+
+/* Ensure the nav-small adjustments don't affect mobile layout */
+@media (max-width: 600px) {
+    .header-nav.nav-small {
+        padding: 20px 0; /* Reset to default padding on mobile */
+    }
+
+    .header-nav.nav-small .logo-container img {
+        max-width: 50px; /* Keep the mobile logo size unchanged */
+    }
+
+    .header-nav.smaller-nav .menu a {
+        font-size: 12px;
+    }
+}
+
+
+/* Columns */
+
+.two-column-layout {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px; /* Adjust as needed */
+}
+
+.column {
+    flex: 1;
+    padding: 15px; /* Adjust padding as needed */
+    min-width: 300px; /* Ensures columns stack on smaller screens */
+}
+
+@media (max-width: 600px) {
+    .column {
+        flex-basis: 100%; /* Stacks the columns on small screens */
+    }
+}
+
+/* Icons sizes */
+
+.fa-solid.fa-magnifying-glass {
+    font-size: var(--paragraph-font-size); 
+  }
+
+.fa-regular.fa-file {
+    font-size: var(--paragraph-font-size); 
+  }
+
+.fa-regular.fa-copyright {
+    font-size: var(--paragraph-font-size); 
+  }
+
+
+/* Footer */
+.site-footer {
+    position: fixed; /* Make the footer sticky to the bottom */
+    bottom: 0;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    padding: 5px; /* Reduced padding for spacing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack content vertically */
+    width: 100%; /* Make it full-width */
+  }
+  
+  /* Style the disclaimer text */
+  .disclaimer {
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Center-align content within the footer */
+    font-size: var(--small-font-size);
+  }
+  
+  /* Style the copyright text separately if needed */
+  .copyright {
+    font-weight: bold;
+  }
+
+  .disclaimer a {
+    color: white; /* Set the link color to white */
+    text-decoration: none; /* Remove underline, if needed */
+  }
+  
+  /* Media query for mobile responsiveness */
+  @media (max-width: 768px) {
+    .site-footer {
+      padding: 5px;
+      height: auto; /* Revert to automatic height on smaller screens */
+    }
+  
+    .disclaimer {
+      margin-left: 5px;
+      margin-right: 5px;
+      text-align: center; /* Center-align content within the footer */
+      font-size: 10px;
+    }
+  }
+  
+
+
+
+/* Hero Section */
+/* Keyframes for the animated gradient */
+@keyframes gradientAnimation {
+    0% {
+      background-size: 50% 50%;
+    }
+    50% {
+      background-size: 100% 100%;
+    }
+    100% {
+      background-size: 50% 50%;
+    }
+  }
+  
+  /* hero-section */
+  .hero-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 0;
+  
+      /* Lighter circular radial gradient background */
+      background: radial-gradient(circle at center, #F3E6FF, #D1B3C4);
+      background-size: 50% 50%; /* Initial size of the radial gradient */
+      animation: gradientAnimation 10s ease infinite; /* Apply the animation */
+  }
+  
+  
+  
+  .hero-content {
+    text-align: center;
+    color: var(--text-color);
+  }
+  
+  .hero-content h1 {
+    font-size: 2em;
     margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .hero-content p {
+    text-align: center;
+  }
+  
+  .hero-section img {
+    width: 30%;
+  }
+  
+  /* Optional: Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 1.5em;
+    }
+  
+    /* Make the SVG smaller and maintain aspect ratio */
+    .hero-section object {
+      width: 30%; /* Adjust the width percentage as needed */
+      height: auto; /* Automatically adjust height to maintain aspect ratio */
+    }
+  }
+ 
+   /* Small tag */ 
+
+/* Base class for small tags */
+.small-tag {
+    font-size: 0.8rem; /* Smaller font size */
+    color: #fff; /* Text color */
+    padding: 5px 10px; /* Padding for spacing */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below the tag */
+    display: inline-block; /* Align with the content */
+}
+
+.small-tag-energy {
+    background-color: #A41034; 
+}
+
+.small-tag-water {
+    background-color: #AE6329; 
+}
+
+.small-tag-work {
+    background-color: #C19D00; 
+}
+
+.small-tag-food {
+    background-color: #016833; 
+}
+
+.small-tag-health {
+    background-color: #006086; 
+}
+
+.small-tag-industry {
+    background-color: #3B2882; 
+}
+
+.small-tag-transp {
+    background-color: #57116A; 
+}
+
+.small-tag-education {
+    background-color: #79244D; 
+}
+
+.small-tag-hunger {
+    background-color: #000000; 
 }
 
 
