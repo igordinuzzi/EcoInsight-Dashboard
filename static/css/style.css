@@ -5,7 +5,7 @@
     --main-font: 'Roboto', sans-serif;
     --accent-font: 'Inconsolata', sans-serif;
     --background-color: #f4f4f4;
-    --text-color: #333;
+    --text-color: #121212;
     --subtext-color: #666;
     --shadow-color: rgba(0, 0, 0, 0.1);
     --margin-top: 30px;
@@ -13,8 +13,8 @@
     --paragraph-font-size: 16px;
     --small-font-size: 14px;
     --padding: 20px;
-    --button-black: #C9BDE5; /* Lavender purple color */
-    --button-black-hover: #FFFFFF; /* Lighter shade for hover */
+    --primary-color: #ddd; /* Lavender purple color */
+    --secondary-color: #333; /* Lighter shade for hover */
     --secondary-font-size: 20px;
     --nav-font-size: 20px;
 }
@@ -162,12 +162,13 @@ p.smaller {
     align-items: center; /* Centers children vertically */
     justify-content: center; /* Center children horizontally */
     position: relative; /* For absolute positioning of children */
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
     padding: var(--padding);
     margin-top: 0; /* Set margin-top to 0 */
     margin-bottom: 0; /* Set margin-bottom to 0 */
     width: 100%; /* Make width full */
     box-sizing: border-box; /* Include padding in the width calculation */
+    color: var(--background-color);
 }
 
 
@@ -180,19 +181,27 @@ p.smaller {
 
 #searchBar {
     width: calc(50% - 22px); /* Adjust width to 50% on desktop */
+    margin-left: 5px;
+    border-color: #B0B0B0;
+}
+
+.search-label {
+    margin-right: 10px; /* Adjust the right margin of the label */
+    font-size: var(--nav-font-size);
+    color: var(--text-color);
 }
 
 button {
     border: none;
     cursor: pointer;
-    background-color: var(--button-black);
-    color: var(--text-color);
+    background-color: var(--text-color);
+    color: var(--background-color);
     margin-left: 10px;
     font-size: var(--secondary-font-size);
 }
 
 button:hover {
-    background-color: var(--button-black-hover);
+    background-color: var(--secondary-color);
 }
 
 /* Style for the autocomplete list */
@@ -204,7 +213,7 @@ button:hover {
     width: calc(50% - 22px); /* Same as the search bar */
     z-index: 1000; 
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1); 
-    background-color: white;
+    background-color: var(--background-color);
     font-size: var(--secondary-font-size);
 }
 
@@ -215,12 +224,27 @@ button:hover {
     cursor: pointer;
     background-color: var(--background-color);
     border-bottom: 1px solid #ddd;
+    color: var(--text-color);
+    border-radius: 3px;
 }
 
 #autocomplete-list div:hover {
-    background-color: var(--text-color);
-    color: var(--background-color);
+    background-color: #e6e6e6;
+    color: var(--text-color);
 }
+
+.autocomplete-active {
+    background-color: #e9e9e9; /* Light grey background */
+    color: #000000; /* Dark text color */
+    cursor: pointer; /* Cursor style */
+}
+
+/* Optional: hover style for mouse users */
+.autocomplete-list div:hover {
+    background-color: #e9e9e9;
+    color: #000000;
+}
+
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
@@ -249,9 +273,9 @@ button:hover {
     text-align: center;
     padding: 20px 0;
     width: 100%;
-    position: sticky; /* Add this line */
-    top: 0; /* Add this line */
-    z-index: 1000; /* Optional, ensures the nav is above other content */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 
@@ -273,13 +297,14 @@ button:hover {
 }
 
 .menu a {
-    color: var(--button-black);
+    color: var(--background-color);
     text-decoration: none;
     font-size: var(--nav-font-size);
 }
 
 .menu a:hover {
-    color: var(--button-black-hover);
+    border-bottom: 2px solid #f9f9f9;
+
 }
 
 /* Mobile responsiveness */
@@ -309,29 +334,27 @@ button:hover {
     transition: padding 0.3s; /* Smooth transition for the padding change */
 }
 
-/* Optionally, reduce the size of the logo as well */
 .header-nav.smaller-nav .logo-container img {
     max-width: 100px; /* Smaller logo */
     transition: max-width 0.3s; /* Smooth transition for the logo resizing */
 }
 
 .header-nav.smaller-nav .menu a {
-    font-size: 14px;
+    font-size: 14px; /* Smaller font size for the menu */
 }
 
-
-/* Ensure the nav-small adjustments don't affect mobile layout */
+/* Adjustments for mobile responsiveness, if needed */
 @media (max-width: 600px) {
-    .header-nav.nav-small {
+    .header-nav.smaller-nav {
         padding: 20px 0; /* Reset to default padding on mobile */
     }
 
-    .header-nav.nav-small .logo-container img {
-        max-width: 50px; /* Keep the mobile logo size unchanged */
+    .header-nav.smaller-nav .logo-container img {
+        max-width: 150px; /* Keep the mobile logo size unchanged */
     }
 
     .header-nav.smaller-nav .menu a {
-        font-size: 12px;
+        font-size: 16px; /* Reset to default font size on mobile */
     }
 }
 
@@ -374,116 +397,57 @@ button:hover {
 
 /* Footer */
 .site-footer {
-    position: fixed; /* Make the footer sticky to the bottom */
-    bottom: 0;
-    background-color: var(--text-color);
-    color: var(--background-color);
+    position: relative; /* Changed from 'fixed' to 'relative' */
+    background-color: #ddd;
+    color: var(--text-color);
     padding: 5px; /* Reduced padding for spacing */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column; /* Stack content vertically */
     width: 100%; /* Make it full-width */
-  }
-  
-  /* Style the disclaimer text */
-  .disclaimer {
+}
+
+/* Style the disclaimer text */
+.disclaimer {
     margin: 0; /* Remove default margin */
     text-align: center; /* Center-align content within the footer */
     font-size: var(--small-font-size);
-  }
-  
-  /* Style the copyright text separately if needed */
-  .copyright {
+}
+
+/* Style the copyright text separately if needed */
+.copyright {
     font-weight: bold;
-  }
+}
 
-  .disclaimer a {
-    color: white; /* Set the link color to white */
+.disclaimer a {
     text-decoration: none; /* Remove underline, if needed */
-  }
-  
-  /* Media query for mobile responsiveness */
-  @media (max-width: 768px) {
-    .site-footer {
-      padding: 5px;
-      height: auto; /* Revert to automatic height on smaller screens */
-    }
-  
-    .disclaimer {
-      margin-left: 5px;
-      margin-right: 5px;
-      text-align: center; /* Center-align content within the footer */
-      font-size: 10px;
-    }
-  }
-  
-
-
-
-/* Hero Section */
-/* Keyframes for the animated gradient */
-@keyframes gradientAnimation {
-    0% {
-      background-size: 50% 50%;
-    }
-    50% {
-      background-size: 100% 100%;
-    }
-    100% {
-      background-size: 50% 50%;
-    }
-  }
-  
-  /* hero-section */
-  .hero-section {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 100px 0;
-  
-      /* Lighter circular radial gradient background */
-      background: radial-gradient(circle at center, #F3E6FF, #D1B3C4);
-      background-size: 50% 50%; /* Initial size of the radial gradient */
-      animation: gradientAnimation 10s ease infinite; /* Apply the animation */
-  }
-  
-  
-  
-  .hero-content {
-    text-align: center;
     color: var(--text-color);
-  }
-  
-  .hero-content h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .hero-content p {
-    text-align: center;
-  }
-  
-  .hero-section img {
-    width: 30%;
-  }
-  
-  /* Optional: Responsive adjustments */
-  @media screen and (max-width: 768px) {
-    .hero-content h1 {
-      font-size: 1.5em;
+}
+
+.disclaimer a:hover {
+    border-bottom: 1px solid #121212;
+}  
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 5px;
+        height: auto; /* Revert to automatic height on smaller screens */
     }
-  
-    /* Make the SVG smaller and maintain aspect ratio */
-    .hero-section object {
-      width: 30%; /* Adjust the width percentage as needed */
-      height: auto; /* Automatically adjust height to maintain aspect ratio */
+
+    .disclaimer {
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center; /* Center-align content within the footer */
+        font-size: 10px;
     }
-  }
- 
+}
+
+  
+
+
+
    /* Small tag */ 
 
 /* Base class for small tags */
@@ -532,4 +496,31 @@ button:hover {
     background-color: #000000; 
 }
 
+
+#topButton {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place regardless of scrolling */
+    bottom: 150px; /* 20px from the bottom */
+    right: 30px; /* 30px from the right */
+    z-index: 99; /* Sit on top */
+    border: none; /* No border */
+    outline: none; /* Remove outline */
+    background-color: var(--text-color); /* Grey background */
+    color: var(--background-color); /* Black text */
+    cursor: pointer; /* Pointer/hand icon */
+    padding: 15px; /* Some padding around the text */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Larger text size */
+}
+
+#topButton:hover {
+    background-color: var(--secondary-color); /* Darker grey background on hover */
+}
+
+/* Hide the button on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+    #topButton {
+        display: none;
+    }
+}
 
