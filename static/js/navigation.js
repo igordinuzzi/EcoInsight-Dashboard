@@ -1,4 +1,7 @@
-window.onscroll = function() {shrinkNavOnScroll()};
+window.onscroll = function() {
+    shrinkNavOnScroll();
+    scrollFunction();
+};
 
 function shrinkNavOnScroll() {
     var header = document.querySelector('.header-nav');
@@ -7,4 +10,18 @@ function shrinkNavOnScroll() {
     } else {
         header.classList.remove('smaller-nav');
     }
+}
+
+function scrollFunction() {
+    let topButton = document.getElementById("topButton");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        topButton.style.display = "block";
+    } else {
+        topButton.style.display = "none";
+    }
+}
+
+function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
