@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charts</title>
+    <title>EcoInsight</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon/favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -23,18 +24,9 @@
         </nav>
     </header>
     
-
-    <!-- Hero section -->
-    <div class="hero-section">
-        <div>
-          <h1 class="hero-content">Unlocking Progress: EcoInsight</h1>
-          <h2 class="hero-content">Join us in the pursuit of a brighter and more equitable tomorrow.</h2>
-        </div>
-      </div>   
-
     <!-- Search bar -->
     <div class="search-container" id="search">
-        <label for="searchBar">Search:</label>
+        <label for="searchBar" class="search-label">Search:</label>
         <input type="text" id="searchBar" onkeyup="autocompleteSearch(this.value)" placeholder="Search here...">
         <button onclick="clearSearch()">Clear</button>
         <div id="autocomplete-list"></div>
@@ -297,11 +289,15 @@
                 <div aria-label="Tackling Zero-Hunger and Child Stunting">
                     {{ chart12_html|safe }}
                     </div>
-            </div>
+            </div> 
     </div>
+
 </main>
 
+
+
 <footer class="site-footer">
+    <button onclick="scrollToTop()" id="topButton" title="Go to top">Top</button>   
     <p class="disclaimer">Disclaimer: This website is a student's project for learning Python. 
         The information presented on this website has been sourced from The Sustainable Development Goals Report 2023,<br> 
         as published by the United Nations. The copyright for this content is held by the United Nations. 
