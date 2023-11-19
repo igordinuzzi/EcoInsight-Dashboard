@@ -58,6 +58,10 @@ def index():
         sliders=sliders1
     )
 
+    # Text for data1
+    data1_title = "Increasing Access to Renewable Energy Globally, Especially in Developing Nations"
+    data1_paragraph = "Clean energy access is vital for health, well-being, and sustainable development. It powers homes and industries, ensures cleaner air, reduces carbon emissions, and fights climate change. Key challenges are developing renewables, improving storage, and equitable distribution, particularly in underserved areas. Advanced renewable technologies, energy efficiency, and public awareness of energy conservation are essential. This prioritization boosts health, quality of life, and global sustainability."
+
 
     # Data2
     data2 = {
@@ -110,6 +114,11 @@ def index():
         sliders=sliders2
     )
 
+    # Text for data2
+    data2_title = "Exploring Sustainable Solutions for Clean Water Access and Quality"
+    data2_paragraph = "Enhancing water-use efficiency and clean water access is essential for sustainable development. Optimizing water use, utilizing innovative practices such as wastewater recycling and water-saving technologies, helps reduce waste and conserve resources. Additionally, improving water purification, protecting sources, and expanding infrastructure, especially in underserved areas, are key to health and quality of life. This approach simultaneously addresses health, environmental concerns, and supports long-term sustainability and climate resilience."
+
+
     # Data3
     data3 = {
         'Year': [2015, 2022] * 7,  # Example years
@@ -160,6 +169,11 @@ def index():
     fig3.update_layout(
         sliders=sliders3
     )
+
+    # Text for data3
+    data3_title = "Enhancing Workforce Well-being for Economic and Social Prosperity"
+    data3_paragraph = "Promoting decent work is crucial for sustainable growth and well-being. It encompasses productive employment with fair pay, workplace safety, and social protection for families. The concept includes personal development, social integration, and equal opportunities. Realizing this goal involves job creation, upholding workers' rights, social protection, and dialogue among governments, employers, and workers. These efforts enhance workers' quality of life and boost the economy, contributing to sustainable development."
+
 
     # Data4
     data4 = {
@@ -212,6 +226,10 @@ def index():
         sliders=sliders4
     )
 
+    # Text for data4
+    data4_title = "Addressing Food Waste: Steps Towards Environmental Conservation and Social Responsibility"    
+    data4_paragraph = "Reducing food waste is key for environmental sustainability and social responsibility. Much of the food waste leads to emissions and resource loss. Addressing this involves the entire food supply chain, including efficient production, distribution, responsible consumption, and recycling methods like composting. Collaboration among governments, businesses, and consumers in policy-making and action is essential to minimize waste, conserve resources, reduce environmental impact, and enhance food security, particularly in areas with food access challenges."
+
     # Data5
     data5 = {
         'Year': [2015, 2022] * 7,  # Example years
@@ -262,6 +280,10 @@ def index():
     fig5.update_layout(
         sliders=sliders5
     )
+
+    # Text for data5
+    data5_title = "Ensuring Quality Healthcare for Mothers and Newborns During Childbirth"
+    data5_paragraph = "Ensuring good health during childbirth is critical for mothers and newborns and demands comprehensive healthcare. This encompasses quality prenatal and postnatal care, skilled healthcare professionals, and education on childbirth and infant care. Addressing wider factors like poverty and healthcare access is also vital. Combining medical care with community support can reduce childbirth complications, leading to healthier families and communities."
 
     # Data6
     data6 = {
@@ -314,6 +336,10 @@ def index():
         sliders=sliders6
     )
 
+    # Text for data6
+    data6_title = "Comprehensive Strategies for HIV Prevention and Management"    
+    data6_paragraph = "Effective HIV/AIDS management is crucial for health and well-being, involving antiretroviral therapy, widespread testing, counseling, and preventive education. Addressing socio-economic factors such as poverty and healthcare access is essential. Improving healthcare infrastructure for consistent treatment access and promoting community involvement for prevention and destigmatization are key. Integrating medical treatment with social support and education can significantly mitigate HIV's impact on individuals and communities."
+
     # Data7
     data7 = {
         'Year': [2015, 2022] * 7,  # Example years
@@ -364,6 +390,10 @@ def index():
     fig7.update_layout(
         sliders=sliders7
     )
+
+    # Text for data7
+    data7_title = "Synergy in Healthcare: Collaborative Roles of Doctors and Nurses"    
+    data7_paragraph = "Effective HIV/AIDS management is crucial for health and well-being, involving antiretroviral therapy, widespread testing, counseling, and preventive education. Addressing socio-economic factors such as poverty and healthcare access is essential. Improving healthcare infrastructure for consistent treatment access and promoting community involvement for prevention and destigmatization are key. Integrating medical treatment with social support and education can significantly mitigate HIV's impact on individuals and communities."
 
     # Data8
     data8 = {
@@ -416,6 +446,10 @@ def index():
         sliders=sliders8
     )
 
+    # Text for data8
+    data8_title = "Driving Growth Through Sustainable Industrial Innovation"
+    data8_paragraph = "Innovation in industry is crucial for sustainable development and economic growth. It requires developing and implementing new ideas, processes, and technologies to improve efficiency, lessen environmental impact, and create new markets and jobs. A supportive ecosystem, with government incentives, research and development, and academia-industry collaboration, is key. Fostering a culture of creativity and incorporating sustainable practices ensures environmentally responsible industrial growth, building resilient economies and adapting to market changes."
+
     # Data9
     data9 = {
         'Year': [2015, 2022] * 7,  # Example years
@@ -466,6 +500,10 @@ def index():
     fig9.update_layout(
         sliders=sliders9
     )
+
+    # Text for data9
+    data9_title = "Developing Efficient and Eco-Friendly Public Transport Systems"
+    data9_paragraph = "Improving public transportation is key for sustainable mobility and urban quality of life. It helps reduce traffic congestion, lower emissions, and provides affordable, accessible travel options. Essential measures involve expanding and updating infrastructure, like buses and trains, and integrating different transport modes for enhanced connectivity. Prioritizing reliability, efficiency, and safety can encourage a shift from private to public transit. Sustainable practices like electric vehicles and optimized routing advance environmental objectives. Government and urban planner collaboration is crucial in developing effective public transit systems, fostering more inclusive and eco-friendly urban communities."
 
     # Data10
     data10 = {
@@ -518,6 +556,10 @@ def index():
         sliders=sliders10
     )
 
+    # Text for data10
+    data10_title = "Fostering a Collaborative and Dynamic Educational Environment"
+    data10_paragraph = "Collaborative education, engaging teachers, administrators, and students, improves learning quality. Teachers guide knowledge and critical thinking, administrators offer resources and support, and students actively participate, enriching learning with diverse perspectives. This synergistic method better prepares students for real-world challenges, creating a more dynamic and impactful educational experience."
+
     # Data11
     data11 = {
         'Year': [2015, 2022] * 7,  # Example years
@@ -568,6 +610,10 @@ def index():
     fig11.update_layout(
         sliders=sliders11
     )
+
+    # Text for data11
+    data11_title = "Holistic Strategies for Tackling Childhood Health Challenges"
+    data11_paragraph = "Tackling childhood overweight and stunting demands comprehensive public health approaches. Overweight and obesity in children, often caused by unhealthy diets and insufficient exercise, bring numerous health risks, just as stunting due to chronic undernutrition affects global growth and development. These issues are tied to socio-economic elements, healthy food availability, and nutrition education. Effective interventions should encourage balanced diets, physical activity, and access to nutritious food, especially in underprivileged areas. Combining healthcare, education, and community initiatives is crucial for enhancing child health and fostering resilient societies."
 
     # Data12
     data12 = {
@@ -620,6 +666,9 @@ def index():
         sliders=sliders12
     )
 
+    # Text for data12
+    data12_title = "Integrated Approaches to Eradicate Hunger and Reduce Child Stunting"
+    data12_paragraph = "Combating zero-hunger and reducing child stunting necessitates a strategy that addresses both immediate food access and underlying socio-economic factors. Tackling stunting, which affects child development and community progress, involves improving agriculture, bettering food distribution, and offering nutrition education. Addressing poverty and inequality is also crucial. Integrating efforts in nutrition, healthcare, education, and economic policy is key to effectively fighting hunger and stunting, leading to healthier and more prosperous communities."
 
     # Convert the charts to HTML
     chart1_html = fig1.to_html()
@@ -635,8 +684,44 @@ def index():
     chart11_html = fig11.to_html()
     chart12_html = fig12.to_html()
 
-    # Pass both charts to the template
-    return render_template('chart_template.html', chart1_html=chart1_html, chart2_html=chart2_html, chart3_html=chart3_html, chart4_html=chart4_html, chart5_html=chart5_html, chart6_html=chart6_html, chart7_html=chart7_html, chart8_html=chart8_html, chart9_html=chart9_html, chart10_html=chart10_html, chart11_html=chart11_html, chart12_html=chart12_html)
+    # Pass charts to the template
+    return render_template('chart_template.html', 
+    data1_title=data1_title,
+    data1_paragraph=data1_paragraph, 
+    data2_title=data2_title,
+    data2_paragraph=data2_paragraph,
+    data3_title=data3_title,
+    data3_paragraph=data3_paragraph,
+    data4_title=data4_title,
+    data4_paragraph=data4_paragraph,
+    data5_title=data5_title,
+    data5_paragraph=data5_paragraph,
+    data6_title=data6_title,
+    data6_paragraph=data6_paragraph,
+    data7_title=data7_title,
+    data7_paragraph=data7_paragraph,
+    data8_title=data8_title,
+    data8_paragraph=data8_paragraph,
+    data9_title=data9_title,
+    data9_paragraph=data9_paragraph,
+    data10_title=data10_title,
+    data10_paragraph=data10_paragraph,
+    data11_title=data11_title,
+    data11_paragraph=data11_paragraph,
+    data12_title=data12_title,
+    data12_paragraph=data12_paragraph,           
+    chart1_html=chart1_html, 
+    chart2_html=chart2_html, 
+    chart3_html=chart3_html, 
+    chart4_html=chart4_html, 
+    chart5_html=chart5_html, 
+    chart6_html=chart6_html, 
+    chart7_html=chart7_html, 
+    chart8_html=chart8_html, 
+    chart9_html=chart9_html, 
+    chart10_html=chart10_html, 
+    chart11_html=chart11_html, 
+    chart12_html=chart12_html)
 
 if __name__ == '__main__':
     app.run(debug=True)
