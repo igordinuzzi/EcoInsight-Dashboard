@@ -524,3 +524,27 @@ button:hover {
     }
 }
 
+/* Chart container */
+
+/* Style for desktop: showing the chart */
+.chart-container {
+    display: block;
+}
+
+.mobile-chart-image {
+    display: none;
+    max-width: 100%;  
+    height: auto;     
+    width: 100%;      
+}
+
+@media screen and (max-width: 768px) {
+    .chart-container {
+        display: none;
+    }
+
+    .mobile-chart-image {
+        display: block;
+    }
+}
+
