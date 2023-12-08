@@ -116,7 +116,9 @@ Navigation JS:
 
 Flask app:    
     ![Code](doc/validator/03-flask.jpg)   
-    
+
+### Color palette, moodboard and logo
+   ![Palette](doc/palette.jpg) 
 ### User Stories
 
 1. **As a researcher,** I want to view and compare data on various sustainable development goals (SDGs) so I can understand the progress and challenges in different regions over the years.
