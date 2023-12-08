@@ -117,6 +117,63 @@ Navigation JS:
 Flask app:    
     ![Code](doc/validator/03-flask.jpg)   
     
+### User Stories
+
+1. **As a researcher,** I want to view and compare data on various sustainable development goals (SDGs) so I can understand the progress and challenges in different regions over the years.
+
+2. **As a student,** I need a user-friendly interface to access data on global sustainability issues for my academic projects and research.
+
+3. **As a policy analyst,** I require detailed visualizations of data related to health, economy, and environment to aid in policy making and evaluation.
+
+4. **As an educator,** I look for interactive and informative resources to teach students about the importance of sustainable development and global challenges.
+
+### User Flow
+
+1. **Landing on the Homepage**
+   - The user sees the header with navigation options and a search bar.
+   - Reads a brief introductory paragraph about global challenges and sustainable development goals.
+
+2. **Exploring Specific Topics**
+   - Scrolls through the topics (like clean energy, clean water, decent work, etc.).
+   - Selects a topic of interest, for example, 'Clean Energy'.
+
+3. **Interacting with Data Visualizations**
+   - Views the chart for the selected topic, with the option to use a slider to change the year.
+   - Reads the accompanying text to understand the context of the data.
+
+4. **Utilizing the Search Function**
+   - Uses the search bar to find specific data or topics.
+   - The search provides autocomplete suggestions.
+
+5. **Accessing Additional Information**
+   - Scrolls to the footer to find more resources, disclaimers, or to access the GitHub repository.
+
+### Task Flow for Viewing Data on a Specific Topic
+
+1. **Selecting a Topic**
+   - User clicks on a topic, such as 'Clean Energy'.
+   - The page scrolls to the 'Clean Energy' section.
+
+2. **Viewing and Interacting with Data**
+   - User observes a bar chart comparing data across different years and countries.
+   - Uses the slider to change the year and view corresponding data.
+
+3. **Reading Supplementary Information**
+   - User reads the title and paragraph explaining the chart to gain context.
+   - If needed, views the chart image for mobile optimization.
+
+4. **Navigating to Other Sections**
+   - User can either scroll manually to other topics or use the navigation bar to jump to a specific section, like 'Clean Water' or 'Decent Work'.
+
+5. **Utilizing Search and Footer Links**
+   - If the user needs specific information, they utilize the search bar.
+   - For additional resources or disclaimers, the user checks the footer.
+
+### Additional Notes
+
+- The website is designed to make complex data accessible and understandable to a diverse audience, from students to professionals.
+- Interactivity with the data (through sliders and charts) enhances user engagement.
+- The search function and well-organized content improve the user experience by making navigation straightforward and intuitive.
 
 ## Testing
 
