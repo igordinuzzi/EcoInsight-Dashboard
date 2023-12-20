@@ -1,5 +1,23 @@
 # EcoInsight Dashboard
 
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Existing Features](#existing-features)
+4. [Technologies Used](#technologies)
+5. [Validations](#validations)
+6. [Design Elements](#design-elements)
+7. [Learning Outcomes](#learning-outcomes)
+8. [User Stories](#user-stories)
+9. [User Flow](#user-flow)
+10. [Task Flow](#task-flow)
+11. [Additional Notes](#additional-notes)
+12. [Testing](#testing)
+13. [Usability Testing](#usability-testing)
+14. [Credits](#credits)
+
+## Introduction
 In an era where understanding and responding to environmental challenges is paramount, the EcoInsight Dashboard serves as a critical tool for visualizing complex global data. 
 By transforming the comprehensive reports of the United Nations into intuitive and interactive bar graphs, we offer a clear and accessible window into the state of our planet.
 This is a Flask web application. 
@@ -117,9 +135,19 @@ Navigation JS:
 Flask app:    
     ![Code](doc/validator/03-flask.jpg)   
 
-### Color palette, moodboard and logo
+## Design elements
    ![Palette](doc/palette.jpg) 
-### User Stories
+
+## Learning Outcomes 
+
+As a student utilizing the EcoInsight Dashboard, I have gained invaluable insights not only in environmental sustainability but also in the application of Python for data analysis and visualization. 
+The dashboard's integration of Python, especially through its use of Flask and Plotly, has provided me with a practical understanding of how Python can be employed in web applications to handle complex datasets. 
+Working with the dashboard has deepened my skills in Python programming, particularly in data manipulation, creating interactive charts, and web development. 
+This hands-on experience has been essential in bridging the gap between theoretical knowledge and real-world application, making my learning journey 
+in both environmental studies and Python programming highly rewarding and relevant.
+   
+
+## User Stories
 
 1. **As a researcher,** I want to view and compare data on various sustainable development goals (SDGs) so I can understand the progress and challenges in different regions over the years.
 
@@ -129,7 +157,7 @@ Flask app:
 
 4. **As an educator,** I look for interactive and informative resources to teach students about the importance of sustainable development and global challenges.
 
-### User Flow
+## User Flow
 
 1. **Landing on the Homepage**
    - The user sees the header with navigation options and a search bar.
@@ -150,7 +178,7 @@ Flask app:
 5. **Accessing Additional Information**
    - Scrolls to the footer to find more resources, disclaimers, or to access the GitHub repository.
 
-### Task Flow for Viewing Data on a Specific Topic
+## Task Flow
 
 1. **Selecting a Topic**
    - User clicks on a topic, such as 'Clean Energy'.
@@ -188,7 +216,29 @@ The website has been thoroughly tested on various devices and browsers:
 - Firefox
 - Safari
 
+## Usability Testing
 
+- User 1: High School Student
+Testing Focus: Navigational ease and educational value.
+Feedback: Found the navigation intuitive and the educational content highly accessible. Suggested adding more interactive quizzes to enhance the learning experience.
+
+- User 2: Environmental Researcher
+Testing Focus: Depth and accuracy of data visualization.
+Feedback: Appreciated the comprehensive data presentation but recommended including more detailed filters for customized data analysis.
+
+- User 3: Web Developer (Familiar with Python)
+Testing Focus: Technical performance and Python integration.
+Feedback: Impressed with the smooth integration of Flask and Plotly but suggested optimizing load times for complex graphs.
+
+- User 4: Graphic Designer
+Testing Focus: Aesthetic appeal and user interface design.
+Feedback: Praised the dashboard's visual design but recommended more contrast in color schemes for better readability.
+
+- User 5: University Professor
+Testing Focus: Educational tool efficacy and interactivity.
+Feedback: Found the dashboard extremely useful as an educational tool. Suggested adding more interactive elements like sliders for time-range selection to engage students better.
+
+Each user brought unique perspectives to the usability testing, providing valuable insights into different aspects of the EcoInsight Dashboard. This feedback, encompassing both technical and user experience aspects, offers a comprehensive understanding of the dashboard's functionality and areas for improvement.
 
 ## Credits
 
