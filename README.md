@@ -137,6 +137,7 @@ Flask app:
 
 ## Design elements
    ![Palette](doc/palette.jpg) 
+   ![Wireframes](doc/wireframes.jpg) 
 
 ## Learning Outcomes 
 
